@@ -1,0 +1,12 @@
+// Variables
+// =================
+$f-raleway : "Raleway", sans-serif;
+$f-mont : "Montserrat", sans-serif;
+
+
+// Font Face
+// =================
+@include font-face('Montserrat', 'sass/fonts/montserrat-Light',300,null,otf);
+@include font-face('Montserrat', 'sass/fonts/montserrat-Regular',400,null,otf);
+@include font-face('Montserrat', 'sass/fonts/montserrat-Medium',500,null,otf);
+@include font-face('Montserrat', 'sass/fonts/montserrat-SemiBold',600,null,otf);

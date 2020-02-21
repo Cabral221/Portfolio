@@ -1,0 +1,111 @@
+.navbar{
+  height: 700px;
+  color: #ffffff;
+}
+.nav{
+  @extend %container;
+  color: #ffffff;
+  display: flex;
+  font-size: 14px;
+  font-weight: 400;
+  align-items: center;
+  padding-top: space(5);
+}
+.nav__logo{
+  width: 32px;
+  flex: none;
+}
+.nav__menu{
+  margin-left: auto;
+  display: flex;
+}
+.nav__menu > * + *{
+  margin-left: space(3);
+}
+
+// Burger
+// =================
+.nav__burger{
+  display: none;
+  margin-left: auto;
+  
+}
+.nav__burger span {
+  position: relative;
+}
+.nav__burger span,
+.nav__burger span::after,
+.nav__burger span::before {
+  content: '';
+  width: 20px;
+  height: 2px;
+  background-color: #ffffff;
+  display: block;
+  transition: transform 0.3s, background .2s;
+}
+.nav__burger span::after,
+.nav__burger span::before {
+  position: absolute;
+}
+.nav__burger span::before{
+  transform-origin: 0 50%;
+  top: -6px;
+}
+
+.nav__burger span::after{
+  transform-origin: 0 50%;
+  bottom: -6px;
+}
+.nav__burger.is-active {
+  span {
+    background: transparent;
+  }
+  span::before {
+    transform: translateY(-2px) rotate(45deg);
+  }
+  span::after {
+    transform: rotate(-45deg);
+  }
+}
+
+
+@media only screen and (max-width: 500px){
+  .nav__burger{
+    display: block;
+  }
+  .nav__burger span,
+  .nav__burger span::before,
+  .nav__burger span::after{
+    background-color: #000000;
+  }
+  .nav__menu{
+    display: none;
+    position: fixed;
+    background: rgba(#FFF, .9);
+    color: #5c5c5c;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 500;
+  }
+  .nav__menu.is-active{
+    display: flex;
+    animation: menuIn 2s;
+  }
+  
+  .nav__menu > * + * {
+    margin-left: 0;
+    margin-top: space(2);
+  }
+
+}
+
+@keyframes menuIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

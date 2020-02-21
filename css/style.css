@@ -1,0 +1,226 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  cursor: pointer;
+  background: transparent;
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font-style: inherit;
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 300;
+  src: url("sass/fonts/montserrat-Light.otf") format("opentype");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 400;
+  src: url("sass/fonts/montserrat-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 500;
+  src: url("sass/fonts/montserrat-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 600;
+  src: url("sass/fonts/montserrat-SemiBold.otf") format("opentype");
+}
+body {
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+  line-height: 2.2;
+  color: #8c8c8c;
+}
+
+.container,
+.nav {
+  max-width: 1370px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.navbar {
+  height: 700px;
+  color: #ffffff;
+}
+
+.nav {
+  color: #ffffff;
+  display: flex;
+  font-size: 14px;
+  font-weight: 400;
+  align-items: center;
+  padding-top: 40px;
+}
+
+.nav__logo {
+  width: 32px;
+  flex: none;
+}
+
+.nav__menu {
+  margin-left: auto;
+  display: flex;
+}
+
+.nav__menu > * + * {
+  margin-left: 24px;
+}
+
+.nav__burger {
+  display: none;
+  margin-left: auto;
+}
+
+.nav__burger span {
+  position: relative;
+}
+
+.nav__burger span,
+.nav__burger span::after,
+.nav__burger span::before {
+  content: "";
+  width: 20px;
+  height: 2px;
+  background-color: #ffffff;
+  display: block;
+  transition: transform 0.3s, background 0.2s;
+}
+
+.nav__burger span::after,
+.nav__burger span::before {
+  position: absolute;
+}
+
+.nav__burger span::before {
+  transform-origin: 0 50%;
+  top: -6px;
+}
+
+.nav__burger span::after {
+  transform-origin: 0 50%;
+  bottom: -6px;
+}
+
+.nav__burger.is-active span {
+  background: transparent;
+}
+.nav__burger.is-active span::before {
+  transform: translateY(-2px) rotate(45deg);
+}
+.nav__burger.is-active span::after {
+  transform: rotate(-45deg);
+}
+
+@media only screen and (max-width: 500px) {
+  .nav__burger {
+    display: block;
+  }
+
+  .nav__burger span,
+.nav__burger span::before,
+.nav__burger span::after {
+    background-color: #000000;
+  }
+
+  .nav__menu {
+    display: none;
+    position: fixed;
+    background: rgba(255, 255, 255, 0.9);
+    color: #5c5c5c;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 500;
+  }
+
+  .nav__menu.is-active {
+    display: flex;
+  }
+
+  .nav__menu > * + * {
+    margin-left: 0;
+    margin-top: 16px;
+  }
+}
+@keyframes menuIn {}
+
+/*# sourceMappingURL=style.css.map */
