@@ -173,7 +173,6 @@ document.addEventListener('DOMContentLoaded', function () {
         slidesToScroll: 2,
         loop: true
     })
-    
     new Carousel(document.getElementById('carousel2'), {
         slidesVisible: 2,
         slidesToScroll: 2
