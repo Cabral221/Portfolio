@@ -21,7 +21,7 @@ main {
 .item img{
     display: block;
     width: 100%;
-    height: auto;
+    max-height: 200px;
 }
 .item__body{
     padding: 25px;
