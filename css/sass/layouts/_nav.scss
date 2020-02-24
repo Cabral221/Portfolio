@@ -5,18 +5,22 @@
 .nav{
   @extend %container;
   color: #ffffff;
+  display: -webkit-box;
   display: flex;
   font-size: 14px;
   font-weight: 400;
-  align-items: center;
+  -webkit-box-align: center;
+          align-items: center;
   padding-top: space(5);
 }
 .nav__logo{
   width: 32px;
-  flex: none;
+  -webkit-box-flex: 0;
+          flex: none;
 }
 .nav__menu{
   margin-left: auto;
+  display: -webkit-box;
   display: flex;
 }
 .nav__menu > * + *{
@@ -41,19 +45,24 @@
   height: 2px;
   background-color: #ffffff;
   display: block;
+  -webkit-transition: background .2s, -webkit-transform 0.3s;
+  transition: background .2s, -webkit-transform 0.3s;
   transition: transform 0.3s, background .2s;
+  transition: transform 0.3s, background .2s, -webkit-transform 0.3s;
 }
 .nav__burger span::after,
 .nav__burger span::before {
   position: absolute;
 }
 .nav__burger span::before{
-  transform-origin: 0 50%;
+  -webkit-transform-origin: 0 50%;
+          transform-origin: 0 50%;
   top: -6px;
 }
 
 .nav__burger span::after{
-  transform-origin: 0 50%;
+  -webkit-transform-origin: 0 50%;
+          transform-origin: 0 50%;
   bottom: -6px;
 }
 .nav__burger.is-active {
@@ -61,10 +70,12 @@
     background: transparent;
   }
   span::before {
-    transform: translateY(-2px) rotate(45deg);
+    -webkit-transform: translateY(-2px) rotate(45deg);
+            transform: translateY(-2px) rotate(45deg);
   }
   span::after {
-    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
   }
 }
 
@@ -87,15 +98,21 @@
     right: 0;
     left: 0;
     bottom: 0;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
     font-size: 22px;
     font-weight: 500;
   }
   .nav__menu.is-active{
+    display: -webkit-box;
     display: flex;
-    animation: menuIn 2s;
+    -webkit-animation: menuIn 2s;
+            animation: menuIn 2s;
   }
   
   .nav__menu > * + * {
@@ -103,6 +120,11 @@
     margin-top: space(2);
   }
 
+}
+
+@-webkit-keyframes menuIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @keyframes menuIn {
