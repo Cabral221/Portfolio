@@ -9,19 +9,20 @@
 @import "modules/_typography.scss";
 
 body{
-    font-size: 14px;
-    font-family: $f-raleway;
-    line-height: 2.2;
-    color: #8c8c8c;
+  font-size: 14px;
+  font-family: $f-raleway;
+  line-height: 2.2;
+  color: #8c8c8c;
 }
 
 .container,
 %container {
-    max-width: 1370px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 20px;
-    padding-right: 20px;
+  width: 100%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 // Imports

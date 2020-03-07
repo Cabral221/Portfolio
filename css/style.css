@@ -105,7 +105,8 @@ body {
 
 .container,
 .nav {
-  max-width: 1370px;
+  width: 100%;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 20px;
@@ -119,20 +120,24 @@ body {
 
 .nav {
   color: #ffffff;
+  display: -webkit-box;
   display: flex;
   font-size: 14px;
   font-weight: 400;
+  -webkit-box-align: center;
   align-items: center;
   padding-top: 40px;
 }
 
 .nav__logo {
   width: 32px;
+  -webkit-box-flex: 0;
   flex: none;
 }
 
 .nav__menu {
   margin-left: auto;
+  display: -webkit-box;
   display: flex;
 }
 
@@ -157,7 +162,10 @@ body {
   height: 2px;
   background-color: #ffffff;
   display: block;
+  -webkit-transition: background 0.2s, -webkit-transform 0.3s;
+  transition: background 0.2s, -webkit-transform 0.3s;
   transition: transform 0.3s, background 0.2s;
+  transition: transform 0.3s, background 0.2s, -webkit-transform 0.3s;
 }
 
 .nav__burger span::after,
@@ -166,11 +174,13 @@ body {
 }
 
 .nav__burger span::before {
+  -webkit-transform-origin: 0 50%;
   transform-origin: 0 50%;
   top: -6px;
 }
 
 .nav__burger span::after {
+  -webkit-transform-origin: 0 50%;
   transform-origin: 0 50%;
   bottom: -6px;
 }
@@ -179,9 +189,11 @@ body {
   background: transparent;
 }
 .nav__burger.is-active span::before {
+  -webkit-transform: translateY(-2px) rotate(45deg);
   transform: translateY(-2px) rotate(45deg);
 }
 .nav__burger.is-active span::after {
+  -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
@@ -205,15 +217,22 @@ body {
     right: 0;
     left: 0;
     bottom: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     flex-direction: column;
+    -webkit-box-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
     align-items: center;
     font-size: 22px;
     font-weight: 500;
   }
 
   .nav__menu.is-active {
+    display: -webkit-box;
     display: flex;
+    -webkit-animation: menuIn 2s;
+    animation: menuIn 2s;
   }
 
   .nav__menu > * + * {
@@ -221,6 +240,21 @@ body {
     margin-top: 16px;
   }
 }
-@keyframes menuIn {}
+@-webkit-keyframes menuIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes menuIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

@@ -1,5 +1,5 @@
-var navbar = document.getElementById('navbar')
-navbar.style.backgroundImage = 'url(images/bg-image.jpg)'
+// var navbar = document.getElementById('navbar')
+// navbar.style.backgroundImage = 'url(images/bg-image.jpg)'
 
 
 document.querySelector('.nav__burger').addEventListener('click', function() {
