@@ -114,25 +114,43 @@ body {
 }
 
 .navbar {
-  height: 700px;
   color: #ffffff;
 }
 
+.carousel__nav {
+  height: 500px;
+}
+
 .nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: auto;
   color: #ffffff;
   display: -webkit-box;
   display: flex;
   font-size: 14px;
   font-weight: 400;
   -webkit-box-align: center;
-  align-items: center;
   padding-top: 40px;
 }
 
-.nav__logo {
+.nav__logo img {
   width: 32px;
   -webkit-box-flex: 0;
   flex: none;
+}
+
+.nav__logo span {
+  font-size: 1.2rem;
+  font-weight: lighter;
+  margin-left: 10px;
+}
+
+.nav__logo img, .nav__logo span {
+  float: left;
 }
 
 .nav__menu {
@@ -143,6 +161,15 @@ body {
 
 .nav__menu > * + * {
   margin-left: 24px;
+}
+
+.nav__menu li {
+  padding: 2px;
+}
+
+.nav__menu .active {
+  color: antiquewhite;
+  border-top: 1px solid antiquewhite;
 }
 
 .nav__burger {
