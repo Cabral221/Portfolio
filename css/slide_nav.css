@@ -18,7 +18,7 @@
 .carousel img{
     display: block;
     width: 100%;
-    max-height: 500px;
+    max-height: 750px;
 }
 .item__body{
     padding: 25px;
@@ -42,6 +42,9 @@
     position: relative;
     overflow: hidden;
 }
+.carousel__nav{
+    height: 750px;
+}
 .carousel__container{
     transition: transform 0.3s;
     transform: translate3d(0,0,0);
@@ -59,8 +62,12 @@
     position: absolute;
     width: 40px;
     height: 40px;
-    background-color: rgb(160, 24, 24);
+    background-image: url("./icon/left-arrow.svg");
+    background-color: rgba(255, 255, 255, 0.4);
+    color: #ffffff;
     background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: center;
     border-radius: 50%;
     top: 50%;
     margin-top: -20px;
@@ -68,6 +75,11 @@
     box-shadow: 0 15px 35px #3232321a, 0 5px, 15px #0000001a;
     cursor: pointer;
     transition: transform .3s, opacity 0.3s;
+}
+.carousel__next{
+    background-image: url("./icon/right-arrow.svg");
+    background-color: rgba(255, 255, 255, 0.4);
+    background-position: center;
 }
 .carousel__next:hover,
 .carousel__prev:hover{
