@@ -117,10 +117,6 @@ body {
   color: #ffffff;
 }
 
-.carousel__nav {
-  height: 500px;
-}
-
 .nav {
   position: absolute;
   top: 0;
@@ -168,8 +164,9 @@ body {
 }
 
 .nav__menu .active {
-  color: antiquewhite;
-  border-top: 1px solid antiquewhite;
+  color: #f1d4ae;
+  border-top: 1px solid #f1d4ae;
+  background-color: lin;
 }
 
 .nav__burger {
