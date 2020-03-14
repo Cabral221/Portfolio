@@ -1,43 +1,9 @@
-.title{
-    font-size: 25px;
-    color: #FFF;
-    font-weight: bold;
-    margin-bottom: 25px;
-}
-
-.item{
-    margin: 40px 10px;
-    background-color: #fff;
-    box-shadow: 0 15px 35px #3232321a, 0 5px, 15px #0000001a;
-    transition: transform 0.3s;
-    transform: translate3d(0, -1px, 0);
-}
-.item:hover{
-    transform: translate3d(0, -10px, 0);
-}
 .carousel img{
     display: block;
     width: 100%;
     max-height: 750px;
 }
-.item__body{
-    padding: 25px;
-}
-.item__title{
-    font-size: 24px;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #232323;
-}
-.item__description{
-    color: #585858;
-}
-.items{
-    position: relative;
-}
-
 /** Carousel **/
-
 .carousel{
     position: relative;
     overflow: hidden;
@@ -116,7 +82,20 @@
 .carousel__pagination__button:hover{
     transform: scale(1.4);
 }
-
+.carousel__caption{
+    color: #FFFFFF;
+    position: absolute;
+    width: 400px;
+    text-align: center;
+    top: 45%;
+    left: calc(50% - 200px);
+    bottom: auto;
+}
+.carousel__caption--title{
+    font-weight: 700;
+    font-size: 1.6rem;
+    display: block;
+}
 @media screen and (max-width: 800) {
     .carousel__pagination {
         display: none;
