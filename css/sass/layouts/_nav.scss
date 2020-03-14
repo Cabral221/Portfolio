@@ -21,7 +21,7 @@
 .nav__logo img{
   width: 32px;
   -webkit-box-flex: 0;
-          flex: none;
+  flex: none;
 }
 .nav__logo span{
   font-size: 1.2rem;
@@ -46,6 +46,13 @@
   color: #f1d4ae;
   border-top: 1px solid #f1d4ae;
   background-color: linear-gradiant(black 50%,white 100%);
+}
+.nav__menu .active{
+  color: $bege;
+  border-top: 1px solid $bege;
+}
+.nav__menu li:hover {
+  color: antiquewhite;
 }
 
 // Burger
@@ -120,11 +127,11 @@
     bottom: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-            flex-direction: column;
+    flex-direction: column;
     -webkit-box-pack: center;
-            justify-content: center;
+    justify-content: center;
     -webkit-box-align: center;
-            align-items: center;
+    align-items: center;
     font-size: 22px;
     font-weight: 500;
   }
@@ -132,7 +139,7 @@
     display: -webkit-box;
     display: flex;
     -webkit-animation: menuIn 2s;
-            animation: menuIn 2s;
+    animation: menuIn 2s;
   }
   
   .nav__menu > * + * {
