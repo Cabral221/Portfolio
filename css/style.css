@@ -170,8 +170,8 @@ body {
 }
 
 .nav__menu .active {
-  color: antiquewhite;
-  border-top: 1px solid antiquewhite;
+  color: #f0ddc5;
+  border-top: 1px solid #f0ddc5;
 }
 
 .nav__menu li:hover {
@@ -288,6 +288,11 @@ body {
   to {
     opacity: 1;
   }
+}
+.btn {
+  padding: 10px 12px;
+  border-radius: 5px;
+  background-color: #c59f70;
 }
 
 /*# sourceMappingURL=style.css.map */

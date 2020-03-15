@@ -1,6 +1,6 @@
 // Variables
 // =================
-$bege : antiquewhite;
+$bege : rgb(240, 221, 197);
 
 // Generic
 // =================
@@ -29,3 +29,10 @@ body{
 // Imports
 // =================
 @import "layouts/_nav.scss";
+
+
+.btn{
+  padding: 10px 12px;
+  border-radius: 5px;
+  background-color: rgb(197, 159, 112);
+}
