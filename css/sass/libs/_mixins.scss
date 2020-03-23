@@ -33,23 +33,23 @@
 // ==================
 @mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
   $src: null;
-
+  
   $extmods: (
     eot: "?",
     svg: "#" + str-replace($name, " ", "_")
   );
-
+  
   $formats: (
     otf: "opentype",
     ttf: "truetype"
   );
-
+  
   @each $ext in $exts {
     $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
     $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
     $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
   }
-
+  
   @if length($weight) == 1 {
     @font-face {
       font-family: quote($name);
@@ -70,5 +70,21 @@
       @include font-face($name, $path + "-" + $suffix,
       $weight, $style, $exts)
     }
+  }
+}
+
+// Triangle
+// ==================
+@mixin triangle ($color: #FFF, $size: 10px){
+  &::after{
+    content: '';
+    width: 0;
+    height: 0;
+    border-bottom: $size solid $color;
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    position: absolute;
+    top: $size * -1;
+    // left: calc(50% - #{$size});
   }
 }

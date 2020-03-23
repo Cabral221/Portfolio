@@ -83,6 +83,9 @@ class Carousel {
         if(this.options.infinite === true){
             this.container.addEventListener('transitionend', this.resetInfinite.bind(this))
         }
+        window.setInterval(() => {
+            this.next()
+        },5000)
     }
 
     /**
@@ -146,6 +149,10 @@ class Carousel {
 
     next () {
         this.goToItem(this.currentItem + this.slidesToScroll)
+        
+        // window.setInterval(() => {
+        //     this.next()
+        // },5000)
     }
 
     prev () {
@@ -246,6 +253,19 @@ let onReady = function () {
         slidesToScroll: 1,
         infinite: true,
         pagination: true
+    })
+
+    new Carousel(document.getElementById('carousel_idea'), {
+        slidesVisible: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        pagination: true,
+    })
+
+    new Carousel(document.getElementById('carousel_blog'), {
+        slidesVisible: 3,
+        slidesToScroll: 1,
+        loop: true
     })
 };
 
